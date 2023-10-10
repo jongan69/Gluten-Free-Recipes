@@ -18,6 +18,7 @@ export async function GET(request: Request, response: Response) {
     const data = await response.json();
     console.log('AI Response: ', data);
 
+    
     if (!data?.error) {
       const recipe =  data?.choices[0]?.text
       return Response.json({ recipe }) 
