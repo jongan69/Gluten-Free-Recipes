@@ -6,7 +6,7 @@ export async function GET(request: Request, response: Response) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
         },
         body: JSON.stringify({
           prompt: `Generate a new Gluten Free Recipe`,
