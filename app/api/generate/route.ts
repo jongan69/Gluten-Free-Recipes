@@ -26,6 +26,6 @@ export async function GET(request: Request, response: Response) {
     }
   } catch (err) {
     console.error(err);
-    return err.toString()
+    return Response.json({ err.toString() }) 
   }
 };
