@@ -1,4 +1,3 @@
-
 const generateRecipe = async ({
   ingredients
 }) => {
@@ -34,7 +33,7 @@ const generateRecipe = async ({
   }
 };
 
-export default async function handler(req, res) {
+export async function POST(req, res) {
   const {
     ingredients
   } = req.body;
